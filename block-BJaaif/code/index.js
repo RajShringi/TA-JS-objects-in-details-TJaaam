@@ -6,9 +6,13 @@
 
 function makePerson(name, age) {
   // add code here
+  let obj = {};
+  obj.name = name;
+  obj.age = age;
+  return obj;
 }
 
-var vicky = makePerson('Vicky', 24);
+var vicky = makePerson("Vicky", 24);
 
 // /********* Uncomment these lines to test your work! *********/
 // console.log(vicky.name); // -> Logs 'Vicky'
@@ -22,6 +26,9 @@ var vicky = makePerson('Vicky', 24);
 
 var personStore = {
   // add code here
+  greet() {
+    console.log("hello");
+  },
 };
 
 // /********* Uncomment this line to test your work! *********/
@@ -31,9 +38,13 @@ var personStore = {
 
 function personFromPersonStore(name, age) {
   // add code here
+  let obj = Object.create(personStore);
+  obj.name = name;
+  obj.age = age;
+  return obj;
 }
 
-var sandra = personFromPersonStore('Sandra', 26);
+var sandra = personFromPersonStore("Sandra", 26);
 
 // /********* Uncomment these lines to test your work! *********/
 // console.log(sandra.name); // -> Logs 'Sandra'
@@ -43,6 +54,9 @@ var sandra = personFromPersonStore('Sandra', 26);
 /*** CHALLENGE 3 of 3 ***/
 
 // add code here
+personStore.introduce = function () {
+  console.log(`Hi my name is ${this.name}`);
+};
 
 // sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 
@@ -54,6 +68,9 @@ var sandra = personFromPersonStore('Sandra', 26);
 
 function PersonConstructor() {
   // add code here
+  this.greet = function () {
+    console.log("hello");
+  };
 }
 
 // /********* Uncomment this line to test your work! *********/
@@ -64,9 +81,11 @@ var simon = new PersonConstructor();
 
 function personFromConstructor(name, age) {
   // add code here
+  this.name = name;
+  this.age = age;
 }
 
-var mike = personFromConstructor('Mike', 30);
+var mike = personFromConstructor("Mike", 30);
 
 // /********* Uncomment these lines to test your work! *********/
 // console.log(mike.name); // -> Logs 'Mike'
@@ -75,6 +94,9 @@ var mike = personFromConstructor('Mike', 30);
 
 /*** CHALLENGE 3 of 3 ***/
 // add code here
+PersonConstructor.introduce = function () {
+  console.log(`Hi my name is ${this.name}`);
+};
 
 // mike.introduce(); // -> Logs 'Hi, my name is Mike'
 
@@ -85,11 +107,15 @@ var mike = personFromConstructor('Mike', 30);
 /*** CHALLENGE 1 of 3 ***/
 
 class PersonClass {
-  constructor() {
+  constructor(name) {
     // add code here
+    this.name = name;
   }
 
   // add code here
+  greet() {
+    console.log("hello");
+  }
 }
 
 // /********* Uncomment this line to test your work! *********/
@@ -99,6 +125,15 @@ var george = new PersonClass();
 /*** CHALLENGE 2 of 3 ***/
 
 // add code here
+class DeveloperClass extends PersonClass {
+  constructor(name, age) {
+    super(name);
+    this.age = age;
+  }
+  introduce() {
+    console.log(`Hello World, my name is ${this.name}`);
+  }
+}
 
 // /********* Uncomment these lines to test your work! *********/
 // var thai = new DeveloperClass('Thai', 32);
@@ -111,28 +146,38 @@ var george = new PersonClass();
 
 var userFunctionStore = {
   sayType: function () {
-    console.log('I am a ' + this.type);
+    console.log("I am a " + this.type);
   },
 };
 
 function userFactory(name, score) {
   let user = Object.create(userFunctionStore);
-  user.type = 'User';
+  user.type = "User";
   user.name = name;
   user.score = score;
   return user;
+  s;
 }
 
-var adminFunctionStore /* Put code here */;
+/* Put code here */
+var adminFunctionStore = {};
+Object.setPrototypeOf(adminFunctionStore, userFunctionStore);
 
 function adminFactory(name, score) {
   // Put code here
+  let admin = userFactory(name, score);
+  admin.type = "Admin";
+  Object.setPrototypeOf(admin, adminFunctionStore);
+  return admin;
 }
 
 /* Put code here for a method called sharePublicMessage*/
+adminFunctionStore.sharePublicMessage = function () {
+  return `Welcome users!`;
+};
 
-var adminFromFactory = adminFactory('Eva', 5);
+var adminFromFactory = adminFactory("Eva", 5);
 
 // /********* Uncomment these lines to test your work! *********/
-// adminFromFactory.sayType() // -> Logs "I am a Admin"
-// adminFromFactory.sharePublicMessage() // -> Logs "Welcome users!"
+// adminFromFactory.sayType(); // -> Logs "I am a Admin"
+// adminFromFactory.sharePublicMessage(); // -> Logs "Welcome users!"
