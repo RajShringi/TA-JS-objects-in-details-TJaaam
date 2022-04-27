@@ -71,6 +71,9 @@ function PersonConstructor() {
   this.greet = function () {
     console.log("hello");
   };
+  this.introduce = function () {
+    console.log(`Hi my name is ${this.name}`);
+  };
 }
 
 // /********* Uncomment this line to test your work! *********/
@@ -81,8 +84,10 @@ var simon = new PersonConstructor();
 
 function personFromConstructor(name, age) {
   // add code here
-  this.name = name;
-  this.age = age;
+  let obj = new PersonConstructor();
+  obj.name = name;
+  obj.age = age;
+  return obj;
 }
 
 var mike = personFromConstructor("Mike", 30);
@@ -94,9 +99,6 @@ var mike = personFromConstructor("Mike", 30);
 
 /*** CHALLENGE 3 of 3 ***/
 // add code here
-PersonConstructor.introduce = function () {
-  console.log(`Hi my name is ${this.name}`);
-};
 
 // mike.introduce(); // -> Logs 'Hi, my name is Mike'
 
