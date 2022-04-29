@@ -46,7 +46,7 @@ class Book {
 
 ```js
 class BookList {
-  constructor(arr, index) {
+  constructor(arr = [], index = 0) {
     this.arr = arr;
     this.index = index;
   }
