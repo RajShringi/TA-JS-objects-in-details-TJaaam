@@ -179,6 +179,7 @@ h1 {
     margin-bottom: 1rem;
     text-align: center;
     background: #f8f6f9;
+    cursor: pointer;
   }
   .correct {
     background: darkseagreen;
@@ -190,11 +191,22 @@ h1 {
   }
 
   .score {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
     padding: 1rem 2rem;
     border-radius: 8px;
-    background: rgb(128, 221, 240);
+    background: tomato;
     color: #fff;
     display: inline-block;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    border: 0;
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 8px;
+    background: tomato;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
   }
 }

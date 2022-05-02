@@ -200,6 +200,7 @@ h1 span {
   margin-bottom: 1rem;
   text-align: center;
   background: #f8f6f9;
+  cursor: pointer;
 }
 
 .question-container .correct {
@@ -213,11 +214,23 @@ h1 span {
 }
 
 .question-container .score {
-  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 1rem 2rem;
   border-radius: 8px;
-  background: #80ddf0;
+  background: tomato;
   color: #fff;
   display: inline-block;
+}
+
+.question-container .btn {
+  padding: 1rem 2rem;
+  border: 0;
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background: tomato;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
