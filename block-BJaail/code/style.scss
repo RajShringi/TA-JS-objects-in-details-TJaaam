@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: rgb(76, 75, 75);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 300;
+  .highlight,
+  i {
+    color: rgb(100, 182, 237);
+  }
+}
+
+form {
+  margin-bottom: 4rem;
+  label,
+  input {
+    display: block;
+    width: 100%;
+  }
+  input {
+    font-size: 1rem;
+    color: #333;
+  }
+  label {
+    margin-bottom: 0.3rem;
+  }
+  .form-control {
+    margin-bottom: 1.3rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e0e0e5;
+    outline: none;
+  }
+  .btn {
+    padding: 0.8rem 1rem;
+    border: 0;
+    width: 100%;
+    background: rgb(100, 182, 237);
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    &:hover {
+      background: rgb(69, 143, 192);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  tr th {
+    border-top: 1px solid #e0e0e5;
+    padding: 0.8rem 0.5rem;
+    font-weight: 600;
+    text-align: left;
+    width: calc(100% / 4);
+  }
+  tr td {
+    width: calc(100% / 4);
+    padding: 0.8rem 0.5rem;
+    border-top: 2px solid #e5e3e6;
+    background: #faf9fb;
+  }
+}
