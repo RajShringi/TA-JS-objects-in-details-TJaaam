@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  color: #545353;
+}
+
+.container {
+  max-width: 100%;
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+  span {
+    color: tomato;
+  }
+}
+
+.question-container {
+  background-color: #fff;
+  box-shadow: 0px 0px 2px rgba($color: #000000, $alpha: 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    background: #f8f6f9;
+    padding: 0.4rem 0;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .option {
+    flex: 0 1 45%;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: #f8f6f9;
+    cursor: pointer;
+  }
+  .correct {
+    background: darkseagreen;
+    color: #fff;
+  }
+  .wrong {
+    background: tomato;
+    color: #fff;
+  }
+
+  .score {
+    margin-bottom: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    background: tomato;
+    color: #fff;
+    display: inline-block;
+  }
+  .btn {
+    padding: 1rem 2rem;
+    border: 0;
+    display: inline-block;
+    margin-top: 2rem;
+    border-radius: 8px;
+    background: tomato;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+  }
+}
